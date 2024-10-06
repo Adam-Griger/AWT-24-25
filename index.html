@@ -1,23 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div>
-        <img src="fig/logo.svg" style="float: left">
-        <h1>Nazov</h1>
-    </div>
-    <h1>Nadpis</h1>
-    <p>blog o receptoch</p>
-    
-    <ul>
-        <li><a href="article1.html">Clanok 1</a></li>
-        <li><a href="article2.html">Clanok 2</a></li>
-        <li><a href="article3.html">Clanok 3</a></li>
-    </ul>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jedlo</title>
+    <link rel="stylesheet" href="./screenStyle.css" />
+  </head>
+  <body class="container-full">
+    <header class="header-scrolling">
+      <div class="logo">
+        <a href="index.html" style="text-decoration: none;"><h1>JE<span style="color:#73b614; text-decoration: line-through;">D</span>LO<span style="color:#73b614; font-size: 16px; margin-left: -6px;">.sk</span></h1></a>
+      </div>
+    </header>
 
-</body>
+    <div class="h-line-header"></div>
+
+    <div class="container-center">
+
+        <div class="main">
+            <h1 class="h1-title pb-20">Vitajte na blogu jedlo.sk</h1>
+            <p class="main-p">Náš blog je venovaný receptom na jedlá, ktoré sú jednoduché, chutné a ľahko zvládnuteľné pre každého. Každý recept obsahuje stručné hodnotenie náročnosti prípravy, odhadovaný čas potrebný na varenie, a samozrejme aj hodnotenie chuti, aby ste vedeli, čo očakávať. Cieľom je, aby si každý našiel niečo, čo mu vyhovuje – od rýchlych receptov na každodenné večere až po tie, ktoré sa hodia na špeciálne príležitosti. S nami bude varenie zábava, a jedlá, ktoré pripravíte, potešia nielen vás, ale aj vašich blízkych.</p>
+        </div>
+
+        <div class="h-line-light"></div>
+        
+        <div>
+            <h2 class="tc pt-20 b-color h2-title">RECEPTY</h2>
+            <ul class="recipe-container">
+                <li class="recipe-container-item">
+                    <div class="img-wrapper">
+                        <a href="article1.html"><img src="./fig/cestoviny.jpg"></a>
+                    </div>
+                    <a href="article1.html" class="recipe-title pt-10 a-color">Pikantné cestoviny s kuracím mäsom a sušenými paradajkami</a>
+                </li>
+                <li class="recipe-container-item">
+                    <div class="img-wrapper">
+                        <a href="article2.html"><img src="./fig/polievka.jpg"></a>
+                    </div>
+                    <a href="article1.html" class="recipe-title pt-10 a-color">Zemiaková polievka s klobáskou</a>
+                </li>
+                <li class="recipe-container-item">
+                    <div class="img-wrapper">
+                        <a href="article3.html"><img src="./fig/buchty.jpg"></a>
+                    </div>
+                    <a href="article1.html" class="recipe-title pt-10 a-color">Celozrnné pečené buchty so slivkovým lekvárom</a>
+                </li>
+                <li class="recipe-container-item">
+                    <div class="img-wrapper">
+                        <a href="article4.html"><img src="./fig/rolada.jpg"></a>
+                    </div>
+                    <a href="article1.html" class="recipe-title pt-10 a-color">Morčacia roláda s jablkami a krupicou so syrom</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="h-line-light"></div>
+
+        <footer>
+            <h4>Adam Griger</h4>
+            <a href="mailto:adam.griger@student.tuke.sk">Kontakt</a>
+        </footer>
+    
+    </div>
+  </body>
 </html>
