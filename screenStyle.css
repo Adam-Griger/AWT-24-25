@@ -2,7 +2,7 @@
 
 html {
     font-size: 16px;
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
     font-weight: 300;
     font-style: normal;
 }
@@ -16,11 +16,17 @@ body, h1, h2, h3, h4, h5, h6, p, ul {
     width: 100%;
 }
 
-.container-center{
+.container-center {
     max-width: 1200px;
     width: 100%;
     background-color: white;
     margin: 0 auto;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
 }
 
 .header-scrolling {
@@ -57,8 +63,57 @@ body, h1, h2, h3, h4, h5, h6, p, ul {
     flex-direction: column;
     align-items: center;
     padding: 20px 20px;
-    margin-top: 30px;
+    margin: 20px 0;
     height: 100%;
+}
+
+.aside-content {
+    padding: 20px 0 20px 20px;
+    margin: 30px 0 -1px 0;
+    border-left: 1px solid #0000001a;
+    border-bottom: 1px solid #0000001a;
+}
+
+.aside-list {
+    width: 100%;
+    display: block;
+}
+
+.aside-item {
+    display: flex;
+    padding-bottom: 20px; 
+}
+
+.aside-item img {
+    height: 122px;
+}
+
+.aside-img {
+    display: block;
+    overflow: hidden;
+    width: 50%;
+}
+
+.aside-img img {
+    transition: all .2s ease;
+    vertical-align: middle;
+}
+
+.aside-img img:hover {
+    transform: scale(1.1);
+}
+
+.aside-text {
+    width: 50%;
+    padding-left: 20px;
+}
+
+.aside-item-title {
+    font-size: 18px;
+    line-height: 20px;
+    text-align: left;
+    text-decoration: none;
+    font-weight: 500;
 }
 
 .h1-title {
@@ -66,6 +121,7 @@ body, h1, h2, h3, h4, h5, h6, p, ul {
     line-height: 40px;
     text-transform: uppercase;
     font-weight: 400;
+    text-align: center;
 }
 
 .h2-title {
@@ -75,17 +131,38 @@ body, h1, h2, h3, h4, h5, h6, p, ul {
     font-weight: 400;
 }
 
+.h3-title {
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.h5-title {
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: .1em;
+}
+
 .main-p {
     line-height: 1.2;
     text-align: center;
     width: 80%;
 }
 
-ul li {
+ul, ol {
     list-style-type: none;
 }
 
-.recipe-container {
+ol {
+    padding-inline-start: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.recipes-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
@@ -95,41 +172,19 @@ ul li {
     padding-top: 20px;
 }
 
-/* @media (max-width: 1200px) {
-
-     .recipe-container {
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-     }
-  }
-
-  @media (max-width: 850px) {
-    .recipe-container {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-     }
-  }
-
-  @media (max-width: 575px) {
-    .recipe-container{
-        display: flex;
-        flex-direction: column;
-    }
-  } */
-
-.recipe-container-item {
+.recipes-container-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
-    padding-bottom: 20px;
+    padding-bottom: 5px;
     overflow: hidden;
 }
 
 .img-wrapper {
     display: inline-block;
     overflow: hidden;
-    width: 285px;
+    max-width: 285px;
 }
 
 .img-wrapper img {
@@ -142,24 +197,47 @@ ul li {
     transform:scale(1.15);
 }
 
+.title-img-wrapper {
+    display: inline-block;
+    overflow: hidden;
+    max-width: 800px;
+}
+
+.title-img-wrapper img {
+    transition: all .7s ease;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.title-img-wrapper img:hover {
+    transform:scale(1.15);
+}
 
 .recipe-title {
     text-align: center;
     text-decoration: none;
     width: 80%;
-    font-weight: 400;
+    font-weight: 500;
 }
 
-.recipe-title:hover {
+.recipe-title:hover, .aside-item-title:hover {
     color: #8d4a1e;
     text-decoration: underline;
+}
+
+.txt-detail {
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 400;
+    max-width: 70%;
+    margin: 0 auto;
 }
 
 footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 20px;
+    padding: 20px 0;
 }
 
 footer > a {
@@ -187,6 +265,14 @@ footer > a:hover {
     padding-bottom: 20px;
 }
 
+.pb-10 {
+    padding-bottom: 10px;
+}
+
+.my-20 {
+    margin: 20px 0;
+}
+
 .a-color {
     color: black;
 }
@@ -199,6 +285,118 @@ footer > a:hover {
     color: #1f2023;
 }
 
+.ingredient-list {
+    padding: 20px 20px;
+}
+
+.ingredient-item {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: 0 auto;
+    padding: 3px 0;
+    border-bottom: 1px solid #0000001a;
+
+}
+
+.ingredient-count {
+    padding-left: 20px;
+    font-weight: 500;
+    text-align: left;
+}
+
+.ingredient-name {
+    padding-right: 20px;
+    text-align: right;
+}
+
+.method-list {
+    padding: 20px 20px;
+}
+
+.method-item {
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.method-num {
+    font-weight: 500;
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+    background-color: black;
+    color: white;
+    float: left;
+}
+
+.method-txt {
+    padding-left: 20px;
+    margin-left: 30px;
+    text-align: left;
+}
+
+.scoreboard {
+    width: 60%;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 5px;
+}
+
+th {
+    font-weight: 400;
+}
+
+@media(max-width: 1200px) {
+
+    .recipes-container {
+       grid-template-columns: 1fr 1fr 1fr;
+       grid-template-rows: 1fr 1fr;
+       padding: 20px 10px 10px 10px;
+    }
+
+    .img-wrapper {
+       max-width: 390px;
+    }
+
+    .aside-content {
+        display: none;
+    }
+
+    .content-grid{
+        grid-template-columns: 1fr;
+    }
+ }
+
+@media (max-width: 850px) {
+    .recipes-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+     }
+     .img-wrapper {
+        max-width: 400px;
+     }
+  }
+
+  @media (max-width: 575px) {
+    .recipes-container{
+        display: flex;
+        flex-direction: column;
+    }
+  }
 
 
 
