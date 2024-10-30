@@ -4,23 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jedlo.sk</title>
-    <link rel="stylesheet" href="screenStyle.css" />
+    <link rel="stylesheet" href="./public/screenStyle.css" media="screen" />
+    <link rel="stylesheet" href="./public/printStyle.css" media="print" />
   </head>
   <body class="container-full">
-    <header class="header-scrolling">
-      <div class="logo">
-        <a href="index.html" style="text-decoration: none;"><h1>JE<span style="color:#73b614; text-decoration: line-through;">D</span>LO<span style="color:#73b614; font-size: 16px; margin-left: -6px;">.sk</span></h1></a>
-      </div>
-    </header>
+    <nav class="nav-scrolling">
+        <div class="logo">
+            <a href="index.html" style="text-decoration: none;"><h6>JE<span style="color:#73b614; text-decoration: line-through;">D</span>LO<span style="color:#73b614; font-size: 16px; margin-left: -6px;">.sk</span></h6></a>
+        </div>
+    </nav>
 
-    <div class="h-line-header"></div>
+    <div class="h-line-nav"></div>
 
     <div class="container-center">
 
-        <div class="main">
+        <header class="main">
             <h1 class="h1-title pb-20">Vitajte na blogu jedlo.sk</h1>
             <p class="main-p">Náš blog je venovaný receptom na jedlá, ktoré sú jednoduché, chutné a ľahko zvládnuteľné pre každého. Každý recept obsahuje stručné hodnotenie náročnosti prípravy, odhadovaný čas potrebný na varenie, a samozrejme aj hodnotenie chuti, aby ste vedeli, čo očakávať. Cieľom je, aby si každý našiel niečo, čo mu vyhovuje – od rýchlych receptov na každodenné večere až po tie, ktoré sa hodia na špeciálne príležitosti. S nami bude varenie zábava, a jedlá, ktoré pripravíte, potešia nielen vás, ale aj vašich blízkych.</p>
-        </div>
+        </header>
 
         <div class="h-line-light"></div>
         
@@ -61,7 +62,7 @@
             
             <h4>Adam Griger</h4>
             <a href="mailto:adam.griger@student.tuke.sk">Kontakt</a>
-            <img src="./fig/bowl.svg" alt="bowl">
+            <img src="./fig/bowl.svg" alt="bowl" class="bowl">
         </footer>
     
     </div>
