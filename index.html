@@ -58,13 +58,78 @@
 
         <div class="h-line-light"></div>
 
+        <div class="my-20">
+            <h2 class="tc b-color h2-title">Zanechajte nám komentár</h2>
+            <form action="#" method="POST" class="form-container" id="opinion-form">
+                <div>
+                  <label for="name">Meno:</label>
+                  <input type="text" id="name" name="name" style="width: 250px;" maxlength="32" placeholder="Napíšte vaše meno..." required>
+                </div>
+                <div>
+                  <label for="email">E-mail:</label>
+                  <input type="email" id="email" name="email" style="width: 250px;" maxlength="32" placeholder="Napíšte váš email..." required>
+                </div>
+                <div>
+                  <label for="image-url">URL obrázka:</label>
+                  <input type="url" id="image-url" name="image-url" style="width: 250px;">
+                </div>
+                <div>
+                  <label>Ako hodnotíte našu stránku?</label>
+                  <div>
+                    <input type="radio" id="rating-1" name="rating" value="1">
+                    <label for="rating-1">1 hviezdička</label>
+                    <input type="radio" id="rating-2" name="rating" value="2">
+                    <label for="rating-2">2 hviezdičky</label>
+                    <input type="radio" id="rating-3" name="rating" value="3">
+                    <label for="rating-3">3 hviezdičky</label>
+                  </div>
+                </div>
+                <div>
+                  <label>Prajete si dostávať novinky emailom?</label>
+                  <div>
+                    <input type="checkbox" id="news-yes" name="news" value="yes">
+                    <label for="news-yes">Áno</label>
+                    <input type="checkbox" id="news-no" name="news" value="no">
+                    <label for="news-no">Nie</label>
+                  </div>
+                </div>
+                <div class="form-opinion">
+                  <label for="opinion">Váš komentár:</label>
+                  <textarea id="opinion" name="opinion" rows="5" cols="40" placeholder="Napíšte komentár..." required></textarea>
+                </div>
+                <div>
+                    <label for="keywords">Kľúčové slová:</label>
+                    <input type="text" id="keywords" name="keywords" list="keywordsList">
+                    <datalist id="keywordsList">
+                        <option value="pikantné cestoviny">
+                        <option value="zemiaková polievka">
+                        <option value="pečené buchty">
+                        <option value="morčacia roláda">
+                        <option value="recepty">
+                        <option value="jedlo"> 
+                    </datalist>
+                </div>
+                <div>
+                    <div class="form-buttons">
+                        <button type="submit" class="send-button">Odoslať</button>
+                        <button type="reset" class="reset-button">Zresetovať</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div id="opinions-list" class="opinion-list my-20"></div>
+        
+        <div class="h-line-light"></div>
+
+
         <footer>
-            
             <h4>Adam Griger</h4>
             <a href="mailto:adam.griger@student.tuke.sk">Kontakt</a>
             <img src="./fig/bowl.svg" alt="bowl" class="bowl">
         </footer>
     
     </div>
+    <script src="./js/index.js" type="module"></script>
   </body>
 </html>
